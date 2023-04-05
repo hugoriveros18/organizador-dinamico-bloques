@@ -2,6 +2,7 @@
   "organizador-dinamico-wrapper": {
     "component": "OrganizadorDinamicoWrapper",
     "composition": "children",
-    "allowed": "*"
+    "allowed": "*",
+    "render": "client"
   }
 }

@@ -1,3 +1,3 @@
-import OrganizadorDinamicoWrapper from "./components/OrganizadorDinamicoWrapper/indes";
+import OrganizadorDinamicoWrapper from "./components/OrganizadorDinamicoWrapper";
 
 export default OrganizadorDinamicoWrapper;

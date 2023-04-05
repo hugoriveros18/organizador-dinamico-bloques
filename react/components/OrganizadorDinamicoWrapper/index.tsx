@@ -4,7 +4,6 @@ import OrganizadorDinamicoWrapperSchema from '../../schema/OrganizadorDinamicoWr
 const OrganizadorDinamicoWrapper = ({disposicionBloques,children}:OrganizadorDinamicoWrapperProps) => {
 
   //STATES
-  const [loading, setLoading] = useState<boolean>(true);
   const [currentChildren, setCurrentChildren] = useState<any>([]);
 
   //EFFECTS
@@ -24,18 +23,9 @@ const OrganizadorDinamicoWrapper = ({disposicionBloques,children}:OrganizadorDin
       return null;
     })
     setCurrentChildren(childrensActivos);
-    setLoading(false);
   },[])
 
   //JSX
-  if(loading) {
-    return (
-      <div>
-        <p>LOADING...</p>
-      </div>
-    )
-  }
-
   return (
     <>{currentChildren}</>
   )
