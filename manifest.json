@@ -1,9 +1,9 @@
 {
-  "vendor": "fabricasunidas",
-  "name": "metatags",
-  "version": "1.0.0",
-  "title": "MetaTags",
-  "description": "CHANGE_ME",
+  "vendor": "panamericana",
+  "name": "organizador-dinamico-bloques",
+  "version": "0.0.1",
+  "title": "Organizador Dinamico de Bloques",
+  "description": "Organizador de Bloques desde el Site Editor",
   "builders": {
     "react": "3.x",
     "messages": "1.x",

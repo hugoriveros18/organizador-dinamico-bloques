@@ -1,5 +1,7 @@
 {
-  "meta-tag": {
-    "component": "MetaTags"
+  "organizador-dinamico-wrapper": {
+    "component": "OrganizadorDinamicoWrapper",
+    "composition": "children",
+    "allowed": "*"
   }
 }
