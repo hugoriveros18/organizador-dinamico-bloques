@@ -8,6 +8,18 @@ export default function useBlocksOrganizer({disposicionBloques, children}:Organi
 
   //EFFECTS
   useEffect(() => {
+    caches.keys().then((names) => {
+      names.forEach((name) => {
+        caches.delete(name);
+      });
+    });
+
+    // caches.keys().then((names) => {
+    //   names.forEach((name) => {
+    //     console.log(name);
+    //   });
+    // });
+
     const childrensActivos = disposicionBloques.map((bloque) =>  {
       if(bloque.configuracionVisibilidad.posiblesConfiguraciones === 'Activacion Manual' && bloque.configuracionVisibilidad.estaActivo) {
         return children[bloque.indexId];

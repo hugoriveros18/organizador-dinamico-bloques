@@ -11,6 +11,7 @@ const OrganizadorDinamicoWrapper = ({disposicionBloques,children}:OrganizadorDin
     children: children
   })
 
+
   //JSX
   if(loading) {
     return (
