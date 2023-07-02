@@ -1,7 +1,7 @@
 {
   "vendor": "panamericana",
   "name": "organizador-dinamico-bloques",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "title": "Organizador Dinamico de Bloques",
   "description": "Organizador de Bloques desde el Site Editor",
   "builders": {

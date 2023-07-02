@@ -4,22 +4,9 @@ export default function useBlocksOrganizer({disposicionBloques, children}:Organi
 
   //STATES
   const [currentChildren, setCurrentChildren] = useState<any>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
   //EFFECTS
   useEffect(() => {
-    caches.keys().then((names) => {
-      names.forEach((name) => {
-        caches.delete(name);
-      });
-    });
-
-    // caches.keys().then((names) => {
-    //   names.forEach((name) => {
-    //     console.log(name);
-    //   });
-    // });
-
     const childrensActivos = disposicionBloques.map((bloque) =>  {
       if(bloque.configuracionVisibilidad.posiblesConfiguraciones === 'Activacion Manual' && bloque.configuracionVisibilidad.estaActivo) {
         return children[bloque.indexId];
@@ -35,11 +22,7 @@ export default function useBlocksOrganizer({disposicionBloques, children}:Organi
       return null;
     })
     setCurrentChildren(childrensActivos);
-    setLoading(false);
   },[])
 
-  return {
-    loading: loading,
-    currentChildren: currentChildren
-  }
+  return currentChildren
 }
